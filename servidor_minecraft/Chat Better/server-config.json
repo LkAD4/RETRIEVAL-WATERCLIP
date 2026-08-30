@@ -1,0 +1,12 @@
+{
+  "enableMedia": true,
+  "maxImageKb": 4096,
+  "maxVideoKb": 8192,
+  "maxVoiceKb": 1024,
+  "cooldownTicks": 40,
+  "chunksPerTick": 4,
+  "radius": -1,
+  "textFallback": true,
+  "archiveUploads": true,
+  "archiveMaxMb": 2048
+}

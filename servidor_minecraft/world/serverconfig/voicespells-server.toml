@@ -1,0 +1,34 @@
+
+[casting]
+	#How voice casting validates a spell before casting it.
+	#CURIO_SPELLBOOK - spellbook in the Curios spellbook slot (default).
+	#ANY_SPELLBOOK   - Curios slot OR a spellbook held in main/off hand.
+	#FREE            - no spellbook needed; level 1, no mana or cooldown.
+	#Allowed Values: CURIO_SPELLBOOK, ANY_SPELLBOOK, FREE
+	castMode = "CURIO_SPELLBOOK"
+	#Max successful voice casts per second per player (0 = unlimited).
+	#Server-side anti-spam — excess casts are silently dropped.
+	#Range: 0 ~ 50
+	maxCastsPerSecond = 5
+	#Spells that may never be voice-cast on this server, regardless of
+	#client-side blocklists. Format: namespace:spell_id, one per line.
+	serverBlockedSpells = []
+	#If non-empty, only the listed player names or UUIDs are allowed to
+	#voice-cast on this server. Empty = everyone is allowed.
+	voiceAllowedPlayers = []
+	#Append every voice-cast to logs/voicespells-casts.log (player + spell + time).
+	#Useful for admin auditing on shared servers.
+	logVoiceCasts = false
+	#Scale the effective spellbook level by the client's voice volume.
+	#Speaking quietly -> level 1, shout -> max level on the equipped spellbook.
+	#Trusts the client to report its own RMS — not a security boundary, but a
+	#fun expressivity toggle. Off by default.
+	voiceVolumeScaling = false
+	#When on, every successful voice cast broadcasts a small chat line to
+	#players within broadcastRadius blocks: 'Niko cast Fireball'.
+	#Off by default — opt-in for RP/streaming servers.
+	broadcastVoiceCasts = false
+	#Radius in blocks for the voice-cast chat broadcast. 0 = only the caster.
+	#Range: 0 ~ 256
+	broadcastRadius = 16
+

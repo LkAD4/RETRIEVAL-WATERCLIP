@@ -1,0 +1,17 @@
+
+[items]
+	#Enable or disable the Iron Carrot
+	enableIronCarrot = true
+
+[stats]
+	#Hunger value given by Iron Carrot
+	#Range: 0 ~ 20
+	ironCarrotHunger = 6
+	#Saturation value given by Iron Carrot
+	#Range: 0.0 ~ 2.0
+	ironCarrotSaturation = 0.6
+
+[features]
+	#Enable standard potion effects for golden carrot variants
+	enableGoldenCarrotEffects = true
+

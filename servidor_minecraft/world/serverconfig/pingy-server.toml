@@ -1,0 +1,37 @@
+#Enable or disable the dynamic tracking system entirely.
+enabled = true
+#Latency threshold (ms) at which the tracking range starts to decrease.
+#Below this value, the player receives normal vanilla tracking.
+#Range: 50 ~ 1000
+pingThreshold = 150
+#Critical latency threshold (ms) at which the reduction is at maximum.
+#Above this value, the multiplier stays at its minimum.
+#Range: 100 ~ 2000
+pingCritical = 300
+#Range multiplier applied when ping reaches the critical threshold.
+#0.25 = range is reduced to 25% of vanilla value.
+#Example: zombie (128 blocks) -> 32 blocks at critical ping.
+#Range: 0.05 ~ 1.0
+minRangeMultiplier = 0.25
+#Minimum absolute range in blocks. The range will never drop below this,
+#even if the multiplier would give a lower value.
+#This ensures that very close entities always remain visible.
+#Range: 8 ~ 128
+minAbsoluteRange = 32
+#Interval in ticks between each smoothed ping recalculation.
+#20 ticks = 1 second. Lower values are more responsive
+#but consume slightly more CPU.
+#Range: 5 ~ 200
+checkIntervalTicks = 20
+#Exponential smoothing factor (EMA) for ping.
+#0.0 = ignores new ping (no update).
+#1.0 = uses only raw ping (no smoothing).
+#0.3 = good balance between responsiveness and stability.
+#Range: 0.01 ~ 1.0
+smoothingFactor = 0.3
+#Send a message to the player when their tracking range changes
+#(transition from normal -> reduced, or reduced -> normal).
+notifyPlayer = true
+#Log tracking range changes in the server console.
+logChanges = true
+
